@@ -1,6 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./App.{js,jsx,ts,tsx}", "./app/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./App.{js,jsx,ts,tsx}",
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./pages/**/*.{js,jsx,ts,tsx}",
+
+    // "./**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -20,11 +27,11 @@ module.exports = {
           "primary-100": "#129575",
         },
         secondary: {
-          "secondary-20": "#FFE1B3",
-          "secondary-40": "#FFCE80",
-          "secondary-60": "#FFBA4D",
-          "secondary-80": "#FFA61A",
-          "secondary-100": "#FF9C00",
+          20: "#FFE1B3",
+          40: "#FFCE80",
+          60: "#FFBA4D",
+          80: "#FFA61A",
+          100: "#FF9C00",
         },
         rating: "#FFAD30",
         warning: {
@@ -36,7 +43,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        poppins: ["Poppins_400Regular"],
+        poppinsSemiBold: ["Poppins_600SemiBold"],
+        poppinsBold: ["Poppins_700Bold"],
       },
     },
   },

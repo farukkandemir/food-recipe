@@ -9,6 +9,10 @@ import {
   View,
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { Link } from "expo-router";
+import { type Href } from "expo-router";
+import CustomButton from "@/components/ui/CustomButton";
+import { router } from "expo-router";
 
 const LandingPage = () => {
   const { height } = useDimensions();
@@ -31,7 +35,7 @@ const LandingPage = () => {
               source={require("../assets/images/landing-logo.png")}
               className="w-24 h-24"
             />
-            <Text className="text-white text-opacity-60 text-center text-2xl font-semibold">
+            <Text className="text-white text-opacity-60 text-center text-2xl font-poppinsSemiBold">
               100K+ Premium Recipe
             </Text>
           </View>
@@ -48,17 +52,18 @@ const LandingPage = () => {
               <Text className="text-7xl font-semibold text-center text-white">
                 Inspired
               </Text>
-              <Text className="text-center text-gray-400 text-2xl pt-[20px]">
+              <Text className="text-center text-gray-400 text-xl pt-[20px] font-poppins">
                 Simple way to find Tasty Recipe
               </Text>
             </View>
-            <View className="w-72 self-center">
-              <TouchableOpacity className="bg-primary-primary-100 rounded-lg p-3 flex-row items-center justify-center space-x-4">
-                <Text className="text-white text-center text-xl">
-                  Start Cooking
-                </Text>
-                <AntDesign name="arrowright" size={24} color="white" />
-              </TouchableOpacity>
+
+            <View>
+              <CustomButton
+                buttonLabel="Start Cooking"
+                onPress={() => {
+                  router.push("/register");
+                }}
+              />
             </View>
           </View>
         </View>

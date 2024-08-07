@@ -1,13 +1,13 @@
 import { Stack } from "expo-router";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function NotFoundScreen() {
   return (
     <>
       <Stack.Screen options={{ title: "Oops!" }} />
       <View style={styles.container}>
-        <h1>404 - Page Not Found</h1>
-        <p>Sorry, the page you are looking for does not exist.</p>
+        <Text>404 - Page Not Found</Text>
+        <Text>Sorry, the page you are looking for does not exist.</Text>
       </View>
     </>
   );
